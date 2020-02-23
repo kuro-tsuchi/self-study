@@ -1,16 +1,18 @@
-# 1. SpringBoot接口Http协议开发实战
+# 1. kjldjfl
+
+## 1.1. SpringBoot接口Http协议开发实战
 
 总结：
 
 - HTTP接口一般使用POST请求
 
-## 1.1. SpringBoot2.xHTTP请求配置讲解
+### 1.1.1. SpringBoot2.xHTTP请求配置讲解
 
 - @RestController = @Controller+@ResponseBody
 
 - @SpringBootApplication = @Configuration+@EnableAutoConfiguration+@ComponentScan
 
-## 1.2. SpringBoot基础HTTP接口GET请求实战
+### 1.1.2. SpringBoot基础HTTP接口GET请求实战
 
    单一参数@RequestMapping(path = "/{id}", method = RequestMethod.GET)
 
@@ -37,7 +39,7 @@
 
 1. HttpServletRequest request自动注入获取参数
 
-## 1.3. SpringBoot基础HTTP接口POST,PUT,DELETE请求实战
+### 1.1.3. SpringBoot基础HTTP接口POST,PUT,DELETE请求实战
 
 POST：向服务器提交数据。几乎目前所有的提交操作都是靠这个完成。
 
@@ -51,7 +53,7 @@ POST：向服务器提交数据。几乎目前所有的提交操作都是靠这�
 }
 ```
 
-## 1.4. 常用json框架介绍和Jackson返回结果处理
+### 1.1.4. 常用json框架介绍和Jackson返回结果处理
 
  1、jackson处理相关自动
   指定字段不返回：@JsonIgnore
@@ -70,4 +72,38 @@ POST：向服务器提交数据。几乎目前所有的提交操作都是靠这�
  @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss",locale="zh",timezone="GMT+8")
  private Date createTime;
 
+```
+
+## 1.2. SpringBoot热部署devtool和配置文件自动注入实战
+
+### 1.2.1. SpringBoot2.x配置文件讲解
+
+   1. YAML（Yet Another Markup Language）
+    写 YAML 要比写 XML 快得多(无需关注标签或引号)
+    使用空格 Space 缩进表示分层，不同层次之间的缩进可以使用不同的空格数目
+    注意：key后面的冒号，后面一定要跟一个空格,树状结构
+
+   1. 参考：<https://docs.spring.io/spring-boot/docs/2.1.0.BUILD-SNAPSHOT/reference/htmlsingle/#common-application-properties>
+  如果需要修改，直接复制对应的配置文件，加到application.yam
+
+### 1.2.2. SpringBoot注解把配置文件自动映射到属性和实体类实战
+
+ 简介：讲解使用@value注解配置文件自动映射到属性和实体类
+
+```yaml
+# application.yml配置文件
+test
+   username: root
+   password: 123
+```
+
+```java
+@Component
+@ConfigurationProperties(prefix="test")
+@PropertySource(value="classpath:application.yml")
+public class DataBaseConfig {
+  
+    private String username
+    private String password;
+}
 ```
