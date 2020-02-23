@@ -107,3 +107,83 @@ public class DataBaseConfig {
     private String password;
 }
 ```
+
+## Springboot2.0单元测试进阶实战和自定义异常处理
+
+### SpringBootTest单元测试实战
+
+- 引入相关依赖
+
+```pom
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-test</artifactId>
+   <scope>test</scope>
+</dependency>
+```
+
+- demo
+
+```java
+//底层用junit  SpringJUnit4ClassRunner
+@RunWith(SpringRunner.class)
+//启动整个springboot工程
+@SpringBootTest(classes={XdclassApplication.class})
+public class SpringBootTests {
+
+}
+```
+
+### SpringBoot测试进阶高级篇之MockMvc讲解
+
+ 简介:讲解MockMvc类的使用和模拟Http请求实战
+
+  1. 增加类注解 @AutoConfigureMockMvc
+     @SpringBootTest(classes={XdclassApplication.class})
+  1. 相关API
+   perform：执行一个RequestBuilder请求
+   andExpect：添加ResultMatcher->MockMvcResultMatchers验证规则
+   andReturn：最后返回相应的MvcResult->Response
+
+#### SpringBoot2.x个性化启动banner设置和debug日志
+
+ 简介：自定义应用启动的趣味性日志图标和查看调试日志
+
+  1. 启动获取更多信息 java -jar xxx.jar --debug
+  
+  2、修改启动的banner信息
+   1）在类路径下增加一个banner.txt，里面是启动要输出的信息
+   2）在applicatoin.properties增加banner文件的路径地址
+    spring.banner.location=banner.txt
+
+   3）官网地址 <https://docs.spring.io/spring-boot/docs/2.1.0.BUILD-SNAPSHOT/reference/htmlsingle/#boot-features-banners>
+
+### SpringBoot2.x配置全局异常实战
+
+ 讲解：服务端异常讲解和SpringBoot配置全局异常实战
+
+  1. 默认异常测试  int i = 1/0，不友好
+  
+  1. 异常注解介绍
+   @ControllerAdvice 如果是返回json数据 则用 RestControllerAdvice,就可以不加 @ResponseBody
+
+   //捕获全局异常,处理所有不可知的异常
+   @ExceptionHandler(value=Exception.class)
+
+### SpringBoot2.x配置全局异常返回自定义页面
+
+ 简介：使用SpringBoot自定义异常和错误页面跳转实战
+
+ 1、返回自定义异常界面，需要引入thymeleaf依赖
+  <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-thymeleaf</artifactId>
+  </dependency>
+
+ 2、resource目录下新建templates,并新建error.html
+  ModelAndView modelAndView = new ModelAndView();
+     modelAndView.setViewName("error.html");
+     modelAndView.addObject("msg", e.getMessage());
+     return modelAndView;
+
+     https://docs.spring.io/spring-boot/docs/2.1.0.BUILD-SNAPSHOT/reference/htmlsingle/#boot-features-error-handling
