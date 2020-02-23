@@ -108,9 +108,9 @@ public class DataBaseConfig {
 }
 ```
 
-## Springboot2.0单元测试进阶实战和自定义异常处理
+## 1.3. Springboot2.0单元测试进阶实战和自定义异常处理
 
-### SpringBootTest单元测试实战
+### 1.3.1. SpringBootTest单元测试实战
 
 - 引入相关依赖
 
@@ -134,7 +134,7 @@ public class SpringBootTests {
 }
 ```
 
-### SpringBoot测试进阶高级篇之MockMvc讲解
+### 1.3.2. SpringBoot测试进阶高级篇之MockMvc讲解
 
  简介:讲解MockMvc类的使用和模拟Http请求实战
 
@@ -145,7 +145,7 @@ public class SpringBootTests {
    andExpect：添加ResultMatcher->MockMvcResultMatchers验证规则
    andReturn：最后返回相应的MvcResult->Response
 
-#### SpringBoot2.x个性化启动banner设置和debug日志
+#### 1.3.2.1. SpringBoot2.x个性化启动banner设置和debug日志
 
  简介：自定义应用启动的趣味性日志图标和查看调试日志
 
@@ -158,7 +158,7 @@ public class SpringBootTests {
 
    3）官网地址 <https://docs.spring.io/spring-boot/docs/2.1.0.BUILD-SNAPSHOT/reference/htmlsingle/#boot-features-banners>
 
-### SpringBoot2.x配置全局异常实战
+### 1.3.3. SpringBoot2.x配置全局异常实战
 
  讲解：服务端异常讲解和SpringBoot配置全局异常实战
 
@@ -170,7 +170,7 @@ public class SpringBootTests {
    //捕获全局异常,处理所有不可知的异常
    @ExceptionHandler(value=Exception.class)
 
-### SpringBoot2.x配置全局异常返回自定义页面
+### 1.3.4. SpringBoot2.x配置全局异常返回自定义页面
 
  简介：使用SpringBoot自定义异常和错误页面跳转实战
 
