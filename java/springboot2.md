@@ -1,4 +1,4 @@
-# 1. kjldjfl
+# 1. springboot
 
 ## 1.1. SpringBoot接口Http协议开发实战
 
@@ -84,7 +84,7 @@ POST：向服务器提交数据。几乎目前所有的提交操作都是靠这�
     注意：key后面的冒号，后面一定要跟一个空格,树状结构
 
    1. 参考：<https://docs.spring.io/spring-boot/docs/2.1.0.BUILD-SNAPSHOT/reference/htmlsingle/#common-application-properties>
-  如果需要修改，直接复制对应的配置文件，加到application.yam
+  如果需要修改，直接复制对应的配置文件，加到application.yml
 
 ### 1.2.2. SpringBoot注解把配置文件自动映射到属性和实体类实战
 
