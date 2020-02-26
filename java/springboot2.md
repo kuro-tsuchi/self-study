@@ -20,6 +20,20 @@
     - [1.4.2. SpringBoot2.x整合Mybatis3.x增删改查实操和控制台打印SQL语句](#142-springboot2x%e6%95%b4%e5%90%88mybatis3x%e5%a2%9e%e5%88%a0%e6%94%b9%e6%9f%a5%e5%ae%9e%e6%93%8d%e5%92%8c%e6%8e%a7%e5%88%b6%e5%8f%b0%e6%89%93%e5%8d%b0sql%e8%af%ad%e5%8f%a5)
     - [1.4.3. 事务介绍和常见的隔离级别，传播行为](#143-%e4%ba%8b%e5%8a%a1%e4%bb%8b%e7%bb%8d%e5%92%8c%e5%b8%b8%e8%a7%81%e7%9a%84%e9%9a%94%e7%a6%bb%e7%ba%a7%e5%88%ab%e4%bc%a0%e6%92%ad%e8%a1%8c%e4%b8%ba)
     - [1.4.4. SpringBoot整合mybatis之事务处理实战](#144-springboot%e6%95%b4%e5%90%88mybatis%e4%b9%8b%e4%ba%8b%e5%8a%a1%e5%a4%84%e7%90%86%e5%ae%9e%e6%88%98)
+  - [1.5. SpringBoot2.x整合JPA实战](#15-springboot2x%e6%95%b4%e5%90%88jpa%e5%ae%9e%e6%88%98)
+    - [1.5.1. 引入依赖](#151-%e5%bc%95%e5%85%a5%e4%be%9d%e8%b5%96)
+    - [1.5.2. 相关文件配置](#152-%e7%9b%b8%e5%85%b3%e6%96%87%e4%bb%b6%e9%85%8d%e7%bd%ae)
+    - [1.5.3. 代码](#153-%e4%bb%a3%e7%a0%81)
+  - [1.6. SpringBoot2.x整合Redis实战](#16-springboot2x%e6%95%b4%e5%90%88redis%e5%ae%9e%e6%88%98)
+    - [1.6.1. springboot整合redis相关依赖引入](#161-springboot%e6%95%b4%e5%90%88redis%e7%9b%b8%e5%85%b3%e4%be%9d%e8%b5%96%e5%bc%95%e5%85%a5)
+    - [1.6.2. 相关配置文件配置](#162-%e7%9b%b8%e5%85%b3%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e9%85%8d%e7%bd%ae)
+    - [1.6.3. 常见redistemplate种类讲解和缓存实操(使用自动注入)](#163-%e5%b8%b8%e8%a7%81redistemplate%e7%a7%8d%e7%b1%bb%e8%ae%b2%e8%a7%a3%e5%92%8c%e7%bc%93%e5%ad%98%e5%ae%9e%e6%93%8d%e4%bd%bf%e7%94%a8%e8%87%aa%e5%8a%a8%e6%b3%a8%e5%85%a5)
+      - [1.6.3.1. 注入模板](#1631-%e6%b3%a8%e5%85%a5%e6%a8%a1%e6%9d%bf)
+      - [1.6.3.2. 类型String，List,Hash,Set,ZSet](#1632-%e7%b1%bb%e5%9e%8bstringlisthashsetzset)
+  - [定时任务](#%e5%ae%9a%e6%97%b6%e4%bb%bb%e5%8a%a1)
+  - [日志](#%e6%97%a5%e5%bf%97)
+    - [配置文件](#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6)
+    - [代码](#%e4%bb%a3%e7%a0%81)
 
 <!-- /TOC -->
 
@@ -373,3 +387,178 @@ public class SpringBootTests {
 
    return user.getId();
   }
+
+## 1.5. SpringBoot2.x整合JPA实战
+
+### 1.5.1. 引入依赖
+
+```pom
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+   <groupId>mysql</groupId>
+   <artifactId>mysql-connector-java</artifactId>
+   <scope>runtime</scope>
+</dependency>
+```
+
+### 1.5.2. 相关文件配置
+
+```yml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testData?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+```
+
+### 1.5.3. 代码
+
+```java
+package com.example.demo.repository;
+import com.example.demo.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+}
+
+```
+
+## 1.6. SpringBoot2.x整合Redis实战
+
+### 1.6.1. springboot整合redis相关依赖引入
+
+```pom
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+<!-- lettuce pool 缓存连接池 -->
+<dependency>
+   <groupId>org.apache.commons</groupId>
+   <artifactId>commons-pool2</artifactId>
+</dependency>
+
+```
+
+### 1.6.2. 相关配置文件配置
+
+```yml
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 10000
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 0
+        # 连接超时时间 单位 ms（毫秒
+      shutdown-timeout: 100
+```
+
+### 1.6.3. 常见redistemplate种类讲解和缓存实操(使用自动注入)
+
+#### 1.6.3.1. 注入模板
+
+```java
+   @Autowired
+   private StirngRedisTemplate strTplRedis
+```
+
+#### 1.6.3.2. 类型String，List,Hash,Set,ZSet
+
+opsForValue()、opsForList()、opsForHash()、opsForSet()、opsForZSet()
+
+## 定时任务
+
+## 日志
+
+### 配置文件
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+  <appender name="consoleApp" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %date{yyyy-MM-dd HH:mm:ss.SSS} %-5level[%thread]%logger{56}.%method:%L -%msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <appender name="fileInfoApp" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+             <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>
+                %date{yyyy-MM-dd HH:mm:ss.SSS} %-5level[%thread]%logger{56}.%method:%L -%msg%n
+            </pattern>
+        </encoder>
+        <!-- 滚动策略 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 路径 -->
+            <fileNamePattern>app_log/log/app.info.%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="fileErrorApp" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>
+                %date{yyyy-MM-dd HH:mm:ss.SSS} %-5level[%thread]%logger{56}.%method:%L -%msg%n
+            </pattern>
+        </encoder>
+
+        <!-- 设置滚动策略 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 路径 -->
+            <fileNamePattern>app_log/log/app.err.%d.log</fileNamePattern>
+
+            <!-- 控制保留的归档文件的最大数量，超出数量就删除旧文件，假设设置每个月滚动，
+            且<maxHistory> 是1，则只保存最近1个月的文件，删除之前的旧文件 -->
+             <MaxHistory>1</MaxHistory>
+
+        </rollingPolicy>
+    </appender>
+   <root level="DEBUG">
+        <appender-ref ref="consoleApp"/>
+        <appender-ref ref="fileInfoApp"/>
+        <appender-ref ref="fileErrorApp"/>
+    </root>
+</configuration>
+```
+
+### 代码
+
+```java
+    @GetMapping("log")
+    public void testLog() {
+        logger.debug("this is debug level");
+        logger.info("this is info level ");
+        logger.warn("this is warn level ");
+        logger.error("this is error level");
+
+```
