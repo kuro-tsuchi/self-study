@@ -1,3 +1,28 @@
+<!-- TOC -->
+
+- [1. springboot](#1-springboot)
+  - [1.1. SpringBoot接口Http协议开发实战](#11-springboot%e6%8e%a5%e5%8f%a3http%e5%8d%8f%e8%ae%ae%e5%bc%80%e5%8f%91%e5%ae%9e%e6%88%98)
+    - [1.1.1. SpringBoot2.xHTTP请求配置讲解](#111-springboot2xhttp%e8%af%b7%e6%b1%82%e9%85%8d%e7%bd%ae%e8%ae%b2%e8%a7%a3)
+    - [1.1.2. SpringBoot基础HTTP接口GET请求实战](#112-springboot%e5%9f%ba%e7%a1%80http%e6%8e%a5%e5%8f%a3get%e8%af%b7%e6%b1%82%e5%ae%9e%e6%88%98)
+    - [1.1.3. SpringBoot基础HTTP接口POST,PUT,DELETE请求实战](#113-springboot%e5%9f%ba%e7%a1%80http%e6%8e%a5%e5%8f%a3postputdelete%e8%af%b7%e6%b1%82%e5%ae%9e%e6%88%98)
+    - [1.1.4. 常用json框架介绍和Jackson返回结果处理](#114-%e5%b8%b8%e7%94%a8json%e6%a1%86%e6%9e%b6%e4%bb%8b%e7%bb%8d%e5%92%8cjackson%e8%bf%94%e5%9b%9e%e7%bb%93%e6%9e%9c%e5%a4%84%e7%90%86)
+  - [1.2. SpringBoot热部署devtool和配置文件自动注入实战](#12-springboot%e7%83%ad%e9%83%a8%e7%bd%b2devtool%e5%92%8c%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e8%87%aa%e5%8a%a8%e6%b3%a8%e5%85%a5%e5%ae%9e%e6%88%98)
+    - [1.2.1. SpringBoot2.x配置文件讲解](#121-springboot2x%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e8%ae%b2%e8%a7%a3)
+    - [1.2.2. SpringBoot注解把配置文件自动映射到属性和实体类实战](#122-springboot%e6%b3%a8%e8%a7%a3%e6%8a%8a%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e8%87%aa%e5%8a%a8%e6%98%a0%e5%b0%84%e5%88%b0%e5%b1%9e%e6%80%a7%e5%92%8c%e5%ae%9e%e4%bd%93%e7%b1%bb%e5%ae%9e%e6%88%98)
+  - [1.3. Springboot2.0单元测试进阶实战和自定义异常处理](#13-springboot20%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e8%bf%9b%e9%98%b6%e5%ae%9e%e6%88%98%e5%92%8c%e8%87%aa%e5%ae%9a%e4%b9%89%e5%bc%82%e5%b8%b8%e5%a4%84%e7%90%86)
+    - [1.3.1. SpringBootTest单元测试实战](#131-springboottest%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95%e5%ae%9e%e6%88%98)
+    - [1.3.2. SpringBoot测试进阶高级篇之MockMvc讲解](#132-springboot%e6%b5%8b%e8%af%95%e8%bf%9b%e9%98%b6%e9%ab%98%e7%ba%a7%e7%af%87%e4%b9%8bmockmvc%e8%ae%b2%e8%a7%a3)
+      - [1.3.2.1. SpringBoot2.x个性化启动banner设置和debug日志](#1321-springboot2x%e4%b8%aa%e6%80%a7%e5%8c%96%e5%90%af%e5%8a%a8banner%e8%ae%be%e7%bd%ae%e5%92%8cdebug%e6%97%a5%e5%bf%97)
+    - [1.3.3. SpringBoot2.x配置全局异常实战](#133-springboot2x%e9%85%8d%e7%bd%ae%e5%85%a8%e5%b1%80%e5%bc%82%e5%b8%b8%e5%ae%9e%e6%88%98)
+    - [1.3.4. SpringBoot2.x配置全局异常返回自定义页面](#134-springboot2x%e9%85%8d%e7%bd%ae%e5%85%a8%e5%b1%80%e5%bc%82%e5%b8%b8%e8%bf%94%e5%9b%9e%e8%87%aa%e5%ae%9a%e4%b9%89%e9%a1%b5%e9%9d%a2)
+  - [1.4. 数据库操作之整合Mybaties和事务讲解](#14-%e6%95%b0%e6%8d%ae%e5%ba%93%e6%93%8d%e4%bd%9c%e4%b9%8b%e6%95%b4%e5%90%88mybaties%e5%92%8c%e4%ba%8b%e5%8a%a1%e8%ae%b2%e8%a7%a3)
+    - [1.4.1. SpringBoot2.x整合Mybatis3.x注解实战](#141-springboot2x%e6%95%b4%e5%90%88mybatis3x%e6%b3%a8%e8%a7%a3%e5%ae%9e%e6%88%98)
+    - [1.4.2. SpringBoot2.x整合Mybatis3.x增删改查实操和控制台打印SQL语句](#142-springboot2x%e6%95%b4%e5%90%88mybatis3x%e5%a2%9e%e5%88%a0%e6%94%b9%e6%9f%a5%e5%ae%9e%e6%93%8d%e5%92%8c%e6%8e%a7%e5%88%b6%e5%8f%b0%e6%89%93%e5%8d%b0sql%e8%af%ad%e5%8f%a5)
+    - [1.4.3. 事务介绍和常见的隔离级别，传播行为](#143-%e4%ba%8b%e5%8a%a1%e4%bb%8b%e7%bb%8d%e5%92%8c%e5%b8%b8%e8%a7%81%e7%9a%84%e9%9a%94%e7%a6%bb%e7%ba%a7%e5%88%ab%e4%bc%a0%e6%92%ad%e8%a1%8c%e4%b8%ba)
+    - [1.4.4. SpringBoot整合mybatis之事务处理实战](#144-springboot%e6%95%b4%e5%90%88mybatis%e4%b9%8b%e4%ba%8b%e5%8a%a1%e5%a4%84%e7%90%86%e5%ae%9e%e6%88%98)
+
+<!-- /TOC -->
+
 # 1. springboot
 
 ## 1.1. SpringBoot接口Http协议开发实战
@@ -187,3 +212,164 @@ public class SpringBootTests {
      return modelAndView;
 
      https://docs.spring.io/spring-boot/docs/2.1.0.BUILD-SNAPSHOT/reference/htmlsingle/#boot-features-error-handling
+
+## 1.4. 数据库操作之整合Mybaties和事务讲解
+
+### 1.4.1. SpringBoot2.x整合Mybatis3.x注解实战
+
+ 简介：SpringBoot2.x整合Mybatis3.x注解配置实战
+
+  1、使用starter, maven仓库地址：<http://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter>
+
+  2、加入依赖(可以用 <http://start.spring.io/> 下载)
+
+   <!-- 引入starter-->
+     <dependency>
+         <groupId>org.mybatis.spring.boot</groupId>
+         <artifactId>mybatis-spring-boot-starter</artifactId>
+         <version>1.3.2</version>
+         <scope>runtime</scope>       
+     </dependency>
+      
+    <!-- MySQL的JDBC驱动包	--> 
+      <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <scope>runtime</scope>
+     </dependency> 
+   <!-- 引入第三方数据源 -->  
+     <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.1.6</version>
+     </dependency>
+
+  加载配置，注入到sqlSessionFactory等都是springBoot帮我们完成
+
+  4、启动类增加mapper扫描
+   @MapperScan("net.xdclass.base_project.mapper")
+
+    技巧：保存对象，获取数据库自增id 
+    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
+
+  4、开发mapper
+   参考语法 <http://www.mybatis.org/mybatis-3/zh/java-api.html>
+
+  5、sql脚本
+   CREATE TABLE `user` (
+     `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+     `name` varchar(128) DEFAULT NULL COMMENT '名称',
+     `phone` varchar(16) DEFAULT NULL COMMENT '用户手机号',
+     `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+     `age` int(4) DEFAULT NULL COMMENT '年龄',
+     PRIMARY KEY (`id`)
+   ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+  相关资料：
+  <http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/#Configuration>
+
+  <https://github.com/mybatis/spring-boot-starter/tree/master/mybatis-spring-boot-samples>
+
+  整合问题集合：
+   <https://my.oschina.net/hxflar1314520/blog/1800035>
+   <https://blog.csdn.net/tingxuetage/article/details/80179772>
+
+### 1.4.2. SpringBoot2.x整合Mybatis3.x增删改查实操和控制台打印SQL语句
+
+ 讲解:SpringBoot2.x整合Mybatis3.x增删改查实操, 控制台打印sql语句
+
+ 1、控制台打印sql语句  
+  #增加打印sql语句，一般用于本地开发测试
+  mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
+
+ 2、增加mapper代码  
+     @Select("SELECT * FROM user")
+     @Results({
+         @Result(column = "create_time",property = "createTime")  //javaType = java.util.Date.class
+     })
+     List<User> getAll();
+
+     @Select("SELECT * FROM user WHERE id = #{id}")
+     @Results({
+       @Result(column = "create_time",property = "createTime")
+     })
+     User findById(Long id);
+
+     @Update("UPDATE user SET name=#{name} WHERE id =#{id}")
+     void update(User user);
+
+     @Delete("DELETE FROM user WHERE id =#{userId}")
+     void delete(Long userId);
+  
+  3、增加API
+
+  @GetMapping("find_all")
+  public Object findAll(){
+        return JsonData.buildSuccess(userMapper.getAll());
+  }
+  
+  @GetMapping("find_by_Id")
+  public Object findById(long id){
+        return JsonData.buildSuccess(userMapper.findById(id));
+  }
+  
+  @GetMapping("del_by_id")
+  public Object delById(long id){
+  userMapper.delete(id);
+        return JsonData.buildSuccess();
+  }
+  
+  @GetMapping("update")
+  public Object update(String name,int id){
+   User user = new User();
+   user.setName(name);
+   user.setId(id);
+   userMapper.update(user);
+      return JsonData.buildSuccess();
+  }
+
+### 1.4.3. 事务介绍和常见的隔离级别，传播行为
+
+ 简介：讲解什么是数据库事务，常见的隔离级别和传播行为
+
+ 1、介绍什么是事务，单机事务，分布式事务处理等
+
+ 2、讲解场景的隔离级别
+  Serializable： 最严格，串行处理，消耗资源大
+  Repeatable Read：保证了一个事务不会修改已经由另一个事务读取但未提交（回滚）的数据
+  Read Committed：大多数主流数据库的默认事务等级
+  Read Uncommitted：保证了读取过程中不会读取到非法数据。
+
+ 3、讲解常见的传播行为
+  PROPAGATION_REQUIRED--支持当前事务，如果当前没有事务，就新建一个事务,最常见的选择。
+
+  PROPAGATION_SUPPORTS--支持当前事务，如果当前没有事务，就以非事务方式执行。
+
+  PROPAGATION_MANDATORY--支持当前事务，如果当前没有事务，就抛出异常。
+
+  PROPAGATION_REQUIRES_NEW--新建事务，如果当前存在事务，把当前事务挂起, 两个事务之间没有关系，一个异常，一个提交，不会同时回滚
+
+  PROPAGATION_NOT_SUPPORTED--以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。
+
+  PROPAGATION_NEVER--以非事务方式执行，如果当前存在事务，则抛出异常
+
+### 1.4.4. SpringBoot整合mybatis之事务处理实战
+
+ 简介：SpringBoot整合Mybatis之事务处理实战
+ 1、service逻辑引入事务 @Transantional(propagation=Propagation.REQUIRED)
+
+ 2、service代码
+  @Override
+     @Transactional
+  public int addAccount() {
+   User user = new User();
+   user.setAge(9);
+   user.setCreateTime(new Date());
+   user.setName("事务测试");
+   user.setPhone("000121212");
+
+   userMapper.insert(user);
+         int a = 1/0;
+
+   return user.getId();
+  }
