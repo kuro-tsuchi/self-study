@@ -126,6 +126,17 @@
 
    ```yml
 
+      server:
+        port: 8761
+      eureka:
+        instance:
+          hostname: 127.0.0.1
+        client:
+          register-with-eureka: false
+          fetch-registry: false
+          serviceUrl:
+            defaultZone: <http://>${eureka.instance.hostname}:${server.port}/eureka/
+
    ```
 
 1. 服务注册和发现之Eureka Client搭建商品服务实战
@@ -450,7 +461,7 @@
     2、启动类增加注解
      @EnableHystrixDashboard
 
-     
+
     3、配置文件增加endpoint
 management:
   endpoints:
@@ -461,9 +472,9 @@ management:
     4、访问入口
      http://localhost:8781/hystrix
 
-     Hystrix Dashboard输入： http://localhost:8781/actuator/hystrix.stream 
+     Hystrix Dashboard输入： http://localhost:8781/actuator/hystrix.stream
 
-    
+
     参考资料
      默认开启监控配置
      https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-security-actuator
@@ -826,7 +837,7 @@ management:
    1、config-client加入依赖
 
           <!--配置中心结合消息队列-->
-         
+
           <dependency>
               <groupId>org.springframework.boot</groupId>
               <artifactId>spring-boot-starter-actuator</artifactId>
@@ -1168,8 +1179,8 @@ management:
 
     参数讲解：
     FROM <image>:<tag> 需要一个基础镜像，可以是公共的或者是私有的， 后续构建会基于此镜像，如果同一个Dockerfile中建立多个镜像时，可以使用多个FROM指令
-    
-    VOLUME  配置一个具有持久化功能的目录，主机 /var/lib/docker 目录下创建了一个临时文件，并链接到容器的/tmp。改步骤是可选的，如果涉及到文件系统的应用就很有必要了。/tmp目录用来持久化到 Docker 数据文件夹，因为 Spring Boot 使用的内嵌 Tomcat 容器默认使用/tmp作为工作目录 
+
+    VOLUME  配置一个具有持久化功能的目录，主机 /var/lib/docker 目录下创建了一个临时文件，并链接到容器的/tmp。改步骤是可选的，如果涉及到文件系统的应用就很有必要了。/tmp目录用来持久化到 Docker 数据文件夹，因为 Spring Boot 使用的内嵌 Tomcat 容器默认使用/tmp作为工作目录
 
     ARG  设置编译镜像时加入的参数， ENV 是设置容器的环境变量
     COPY : 只支持将本地文件复制到容器 ,还有个ADD更强大但复杂点
