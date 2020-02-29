@@ -88,7 +88,7 @@
    - 主流的注册中心：
    zookeeper、Eureka、consul、etcd 等
 
-1. 分布式应用知识CAP理论知识
+1. 分布式应用知识CAP理论知识111
     CAP定理：指的是在一个分布式系统中，Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可同时获得。
 
    - 一致性（C）：在分布式系统中的所有数据备份，在同一时刻是否同样的值。（所有节点在同一时间的数据完全一致，越多节点，数据同步越耗时）
