@@ -125,18 +125,16 @@
    - 增加配置application.yml
 
    ```yml
-
-      server:
-        port: 8761
-      eureka:
-        instance:
-          hostname: 127.0.0.1
-        client:
-          register-with-eureka: false
-          fetch-registry: false
-          serviceUrl:
-            defaultZone: <http://>${eureka.instance.hostname}:${server.port}/eureka/
-
+    server:
+      port: 8761
+    eureka:
+      instance:
+        hostname: localhost
+      client:
+        register-with-eureka: false
+        fetch-registry: false
+        serviceUrl:
+          defaultZone: <http://>${eureka.instance.hostname}:${server.port}/eureka/
    ```
 
 1. 服务注册和发现之Eureka Client搭建商品服务实战
@@ -146,22 +144,7 @@
     - 模拟商品信息，存储在内存中
     - 开发商品列表接口，商品详情接口
     - 配置文件加入注册中心地址
-      使用eureka客户端 官方文档：<http://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#netflix-eureka-client-starter>
-
-1. Eureka服务注册中心配置控制台问题处理
-  简介：讲解服务注册中心管理后台，（后续还会细讲）
-
-  问题：eureka管理后台出现一串红色字体：是警告，说明有服务上线率低
-
-  EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY'RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE.
-
-  关闭检查方法：eureka服务端配置文件加入
-  server:
-      enable-self-preservation: false
-      注意：自我保护模式禁止关闭，默认是开启状态true
-
-  问题二：为什么只加一个注册中心地址，就可以注册
-  By having spring-cloud-starter-netflix-eureka-client on the classpath, your application automatically registers with the Eureka Server. Configuration is required to locate the Eureka server, as shown in the following example:
+    - 官方文档：<http://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#netflix-eureka-client-starter>
 
 ## 1.3. 服务消费者ribbon和feign实战和注册中心高可用
 

@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="686585fe-1c65-4593-ac15-e78e16e76d16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcloud/code/productserver/src/main/java/com/example/productserver/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcloud/code/productserver/src/main/java/com/example/productserver/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcloud/code/productserver/src/main/java/com/example/productserver/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springcloud/code/productserver/src/main/java/com/example/productserver/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringCloud.md" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCloud.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\workspace\java\repository" />
-        <option name="mavenHome" value="D:/workspace/java/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../java/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
         <option name="pluginUpdatePolicy" value="UPDATE" />
         <option name="userSettingsFile" value="D:\workspace\java\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
@@ -15,6 +33,8 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1YUKShlKHhOgbcEzW8r40RuQy14" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,9 +42,14 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
 </project>

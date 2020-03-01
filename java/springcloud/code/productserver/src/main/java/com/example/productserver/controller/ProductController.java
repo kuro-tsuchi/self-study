@@ -13,11 +13,8 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @RequestMapping("getOne")
-    public Product getOne(@RequestParam Long id) {
-        System.out.println("hello");
-        Product one = productService.getOne(id);
-        System.out.println(one);
-        return one;
+    @RequestMapping("findById")
+    public Object findById(@RequestParam Long id) {
+        return productService.findById(id);
     }
 }
