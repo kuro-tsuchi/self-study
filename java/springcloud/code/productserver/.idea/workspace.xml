@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99eeb371-2575-4692-9572-4b76367f514d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../code.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/net/xdclass/apigateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/test/java/net/xdclass/apigateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/src/main/java/net/xdclass/eureka_server/EurekaServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka_server/src/test/java/net/xdclass/eureka_server/EurekaServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/OrderServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/domain/ProductOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/fallbcak/ProductClientFallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/service/ProductClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/service/ProductOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/service/impl/ProductOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/java/net/xdclass/order_service/utils/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order_service/src/test/java/net/xdclass/order_service/OrderServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/src/main/java/net/xdclass/product_service/ProductServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/src/main/java/net/xdclass/product_service/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/src/main/java/net/xdclass/product_service/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/src/main/java/net/xdclass/product_service/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/src/main/java/net/xdclass/product_service/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_service/src/test/java/net/xdclass/product_service/ProductServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/src/main/java/com/example/eurekaserver/EurekaserverApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eurekaserver/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productserver/ProductserverApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productserver/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productserver/domain/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productserver/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/productserver/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/productserver/ProductserverApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\workspace\java\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../java/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="pluginUpdatePolicy" value="UPDATE" />
+        <option name="userSettingsFile" value="D:\workspace\java\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YT6kpFUbjCytbql4tVaT07WyLd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProductserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="productserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.productserver.ProductserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="88" key="#Inspections" timestamp="1582990129795">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="88" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1582990129795" />
+    <state x="605" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1582989904946">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="605" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1582989904946" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1582991732973">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1582991732973" />
+    <state width="1557" height="266" key="GridCell.Tab.0.bottom" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.0.center" timestamp="1583023766819">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1583023766819" />
+    <state width="1557" height="266" key="GridCell.Tab.0.left" timestamp="1583023766819">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1583023766819" />
+    <state width="1557" height="266" key="GridCell.Tab.0.right" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.1.bottom" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.1.center" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.1.left" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.1.right" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.2.bottom" timestamp="1583023766821">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.2.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583023766821" />
+    <state width="1557" height="266" key="GridCell.Tab.2.center" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.2.center/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.2.left" timestamp="1583023766820">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.2.left/0.0.1600.860@0.0.1600.860" timestamp="1583023766820" />
+    <state width="1557" height="266" key="GridCell.Tab.2.right" timestamp="1583023766821">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="266" key="GridCell.Tab.2.right/0.0.1600.860@0.0.1600.860" timestamp="1583023766821" />
+    <state x="301" y="72" key="SettingsEditor" timestamp="1583022127311">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="72" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1583022127311" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1583022554628">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1583022554628" />
+  </component>
+</project>
